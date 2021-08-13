@@ -17,7 +17,7 @@
                 commpost_comments.setAttribute('id', 'commpost-comments');
                 
                 var logo_img = document.createElement('img');
-                logo_img.setAttribute('src', 'https://commpost-api.c1.hacobuneapp.com/assets/img/logo.png');
+                logo_img.setAttribute('src', 'https://commpost-web.c1.hacobuneapp.com/assets/img/logo.png');
 
                 var h3 = document.createElement('h3');
                 h3.appendChild(logo_img);
@@ -69,7 +69,7 @@
                 commpost_comment_send_button_div.appendChild(commpost_comment_send_button);
 
                 var commpost_comment_post_loading_img = document.createElement('img');
-                commpost_comment_post_loading_img.setAttribute('src', 'https://commpost-api.c1.hacobuneapp.com/assets/gif/logo.gif');
+                commpost_comment_post_loading_img.setAttribute('src', 'https://commpost-web.c1.hacobuneapp.com/assets/gif/logo.gif');
 
                 var commpost_comment_post_form = document.createElement('form');
                 commpost_comment_post_form.setAttribute('id', 'commpost-comment-post-form');
