@@ -1,5 +1,5 @@
 (async function() {
-    var url = 'https://commpost.on-going.jp/api/v1/healthz';
+    var url = 'https://api.commpost.k8s/api/v1/healthz';
     var method = 'GET';
     var document_uri = document.documentURI;
     var article_id = await digestMessage(document_uri);
@@ -17,7 +17,7 @@
                 commpost_comments.setAttribute('id', 'commpost-comments');
                 
                 var logo_img = document.createElement('img');
-                logo_img.setAttribute('src', 'https://commpost.on-going.jp/assets/img/logo.png');
+                logo_img.setAttribute('src', 'https://api.commpost.k8s/assets/img/logo.png');
 
                 var h3 = document.createElement('h3');
                 h3.appendChild(logo_img);
@@ -69,7 +69,7 @@
                 commpost_comment_send_button_div.appendChild(commpost_comment_send_button);
 
                 var commpost_comment_post_loading_img = document.createElement('img');
-                commpost_comment_post_loading_img.setAttribute('src', 'https://commpost.on-going.jp/assets/gif/logo.gif');
+                commpost_comment_post_loading_img.setAttribute('src', 'https://api.commpost.k8s/assets/gif/logo.gif');
 
                 var commpost_comment_post_form = document.createElement('form');
                 commpost_comment_post_form.setAttribute('id', 'commpost-comment-post-form');
@@ -168,7 +168,7 @@ function showComment(json) {
 }
 
 function getComment(article_id) {
-    var url = 'https://commpost.on-going.jp/api/v1/comments?article_id=' + article_id;
+    var url = 'https://api.commpost.k8s/api/v1/comments?article_id=' + article_id;
     var method = 'GET';
 
     return fetch(url, {
@@ -198,7 +198,7 @@ async function sendComment() {
     var post_loading = document.getElementById('commpost-comment-post-loading');
     post_loading.style.display = '';
 
-    var url = 'https://commpost.on-going.jp/api/v1/comments';
+    var url = 'https://api.commpost.k8s/api/v1/comments';
     var obj = {
         "article_id": article_id,
         "article_url": article_url,
