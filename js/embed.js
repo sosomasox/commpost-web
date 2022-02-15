@@ -25,10 +25,7 @@
                 var commpost_main = document.createElement('div');
                 commpost_main.setAttribute('id', 'commpost-main');
                 commpost_main.appendChild(h3);
-
-                commpost.appendChild(commpost_main);
                 commpost_main.appendChild(commpost_comments);
-
 
                 commpost = document.getElementById('commpost');
                 commpost.appendChild(commpost_main);
